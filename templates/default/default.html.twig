@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">            
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><script src="/typewriter.js"></script>
+ 
+<title>TypewriterJS Demo</title>
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+</head>
+
+<body class="bg-dark">
+
+
+<style>
+  .tab {
+    padding-left:20px;
+  }
+  .tab2 {
+    padding-left:40px;
+  }
+  .red {
+    color:red;
+  }
+  .grey {
+    color:grey;
+  }
+  .teal {
+    color:teal;
+  }
+  .green {
+    color:green;
+  }
+  .lime {
+    color:lime;
+  }
+  .input {
+    color:lime;
+    border: 1px solid green;
+  }
+  .input:focus {
+    color:lime;
+    border: 1px solid lime;
+  }
+  #app {
+      font-family: "Courier";
+  font-size: 14px;
+    color:green;
+  }
+  .Typewriter__cursor {
+    color:lime;
+    font-size:20px;
+  font-weight: bold;
+  }
+</style>
+<div class="container" style="overflow:hidden;padding-top:25px;">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2">
+    </div>
+    <div class="col-md-auto">
+      <form name="message_form">
+        {{ form_widget(form._token) }} 
+        <div id="app">
+        </div>
+      </form>
+
+    </div>
+    <div class="col col-lg-2">
+    </div>
+  </div>
+</div>
+
+
+<script>
+  var typewriter = new Typewriter(app,{
+
+    delay: 40
+  });
+$().ready(function(){
+
+  var app = document.getElementById('app');
+  typewriter.start()
+  
+    .typeString("<strong class='teal'>CreativeDeveloper</strong><span class='green'>({</span>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<div class='tab'></div><strong class='tab green'>name:</strong> '<strong class='lime'>Stefan Sander</strong>',<br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<div class='tab'></div><strong class='tab green'>email:</strong> '<a href='mailto:stefan@stefan-sander.online'><strong class='lime'>stefan@stefan-sander.online</strong></a>'</span>,<br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<div class='tab'></div><strong class='tab green'>github: '<a href='http://github.com/snoke' target='_blank'><strong class='lime'>github.com/snoke</strong></a>'</span>,<br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<div class='tab'></div><strong class='tab green'>technologies:</strong> {<br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString('<div class="tab "></div><strong class="tab2 red">mysql</strong>,<strong  style="color:red;"> php</strong>,<strong  style="color:red;"> c#</strong>,<strong  style="color:red;"> javascript</strong>,</div><br />').callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    
+    .typeString('<div class="tab "></div><strong class="tab2 red">linux</strong>, <strong class="red">apache2</strong>,<span class="grey"> // web server </span><br />').callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString('<div class="tab "></div><strong class="tab2 red">postfix</strong>, <strong class="red">dovecot</strong>,<span class="grey"> // mail server </span><br />').callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString('<div class="tab "></div><strong class="tab2 red">aes-gcm</strong>, <strong class="red">oauth2</strong>,<span class="grey"> // security</span><br />').callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString('<div class="tab"></div><strong class="tab2 red">symfony</strong>, <span class="grey"> // solid php backends </span><br />').callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString('<div class="tab "></div><strong class="tab2 red">jquery</strong>, <span class="grey"> // fancy js frontends </span><br />').callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString('<div class="tab "></div><strong class="tab2 red">ajax</strong>, <strong class="red">restful-api</strong>,<span class="grey"> // web services </span><br />').callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+
+    .typeString("<div class='tab'>}</div>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("}); <span class='grey'>// ps: i <strong class='red'>♥</strong> cookies!</span>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .pauseFor(2000)
+    .deleteChars(8)
+    .typeString("<span class='grey'>coding...</span>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .pauseFor(2000)
+    .deleteChars(3)
+    .typeString("<span class='grey'> (and cookies)</span><br /><br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .pauseFor(2000)
+    .typeString("<span class='grey'> /**</span><br />") .callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<span class='grey'> * if you want to send me a message</span><br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<span class='grey'> * you can send me an email... </span>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .pauseFor(2000)
+    .deleteChars(4)
+    .typeString("<span class='grey'> or <br /></span>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<span class='grey'> * just use following contact form </span><br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<span class='grey'> */</span><br /><br />") .callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<strong class='teal'>ContactForm</strong><span class='green'>({</span>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<div class='form-group row'><div class='col col-sm-3 tab green'  >name:</div><div class='col col-lg'><input  name='message_form[name]' class='form-control  bg-dark input' type='text'  /></div>,</div>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<div class='form-group row'><div class='col col-sm-3 tab green'>email:</div><div class='col col-lg'><input name='message_form[email]' class='form-control  bg-dark input'  type='text'   /></div>,</div>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<div class='form-group row'><div class='col col-sm-3 tab green'>message:</div><div class='col col-lg'><textarea name='message_form[message]' class='form-control bg-dark input' ></textarea></div>,</div>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<div class='form-group row'><div class='col col-sm-3 tab green'>submit:</div><div class='col col-lg'><button  class='btn btn-primary bg-dark input'    type='submit' >submit</button></div>,</div>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("}); <span class='grey'>// ps: have a nice day! &#128522;</span><br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+  ;
+
+  $( "form" ).submit(function( event ) {
+        $('.Typewriter__wrapper').append("<br /> sendmail: ");
+    event.preventDefault();
+    var posting =  $.post('#', $('form').serialize());
+    posting.done(function( data ) {
+      if (true==data.response) {
+        $('.Typewriter__wrapper').append(" <span class='lime'>success</span> <br />");
+      } else {
+        $('.Typewriter__wrapper').append(" <span class='red'>failed</span> <br />");
+      }   
+     $("html, body").animate({ scrollTop: $(document).height() },0);
+    });
+  });
+});
+</script>
+</body>
+</html>
