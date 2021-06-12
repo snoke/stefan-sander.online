@@ -17,16 +17,15 @@ class DefaultController extends AbstractController
     private function sendMail($message) {
         $from='stefan@stefan-sander.online';
         $to='stefan@stefan-sander.online';
-             shell_exec (
-                'sendmail -f '. $from.' -t '.$to.' -u subject -m '. escapeshellarg($message) . ' -s '.$_ENV['SMTP_SERVER'].':587 -o tls=yes -xu '.$_ENV['SMTP_USER'].' -xp '.$_ENV['SMTP_USER_PASSWORD']
+        return shell_exec (
+                'sendemail -f '. $from.' -t '.$to.' -u subject -m '. escapeshellarg($message) . ' -s '.$_ENV['SMTP_SERVER'].':587 -o tls=yes -xu '.$_ENV['SMTP_USER'].' -xp '.$_ENV['SMTP_USER_PASSWORD']
             );
-            return 'sendmail -f '. $from.' -t '.$to.' -u subject -m '. escapeshellarg($message) . ' -s '.$_ENV['SMTP_SERVER'].':587 -o tls=yes -xu '.$_ENV['SMTP_USER'].' -xp '.$_ENV['SMTP_USER_PASSWORD'];
     }
-    
+
     #[Route('/', name: 'default', methods: ['GET'])]
     public function index(MailerInterface $mailer,Request $request): Response
     {
-        
+
 
         $form = $this->createForm(MessageFormType::class);
         return $this->render('default/default.html.twig',[
