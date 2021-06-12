@@ -53,7 +53,7 @@
   }
   .Typewriter__cursor {
     color:lime;
-    font-size:20px;
+    font-size:22px;
   font-weight: bold;
   }
 </style>
@@ -115,12 +115,12 @@ $().ready(function(){
     .deleteChars(4)
     .typeString("<span class='grey'> or <br /></span>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
     .typeString("<span class='grey'> * just use following contact form </span><br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
-    .typeString("<span class='grey'> */</span><br /><br />") .callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<span class='grey'> */</span><br />") .callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
     .typeString("<strong class='teal'>ContactForm</strong><span class='green'>({</span>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
     .typeString("<div class='form-group row'><div class='col col-sm-3 tab green'  >name:</div><div class='col col-lg'><input  name='message_form[name]' class='form-control  bg-dark input' type='text'  /></div>,</div>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
     .typeString("<div class='form-group row'><div class='col col-sm-3 tab green'>email:</div><div class='col col-lg'><input name='message_form[email]' class='form-control  bg-dark input'  type='text'   /></div>,</div>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
     .typeString("<div class='form-group row'><div class='col col-sm-3 tab green'>message:</div><div class='col col-lg'><textarea name='message_form[message]' class='form-control bg-dark input' ></textarea></div>,</div>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
-    .typeString("<div class='form-group row'><div class='col col-sm-3 tab green'>submit:</div><div class='col col-lg'><button  class='btn btn-primary bg-dark input'    type='submit' >submit</button></div>,</div>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<div class='form-group row'><div class='col col-sm-3 tab green'>submit:</div><div class='col col-lg text-center'><button  class='btn btn-primary bg-dark input'    type='submit' >submit</button></div>,</div>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
     .typeString("}); <span class='grey'>// ps: have a nice day! &#128522;</span><br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
   ;
 
