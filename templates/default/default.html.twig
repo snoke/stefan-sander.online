@@ -18,10 +18,10 @@
 
 <style>
   .tab {
-    padding-left:20px;
+    padding-left:10px;
   }
   .tab2 {
-    padding-left:40px;
+    padding-left:20px;
   }
   .red {
     color:red;
@@ -109,13 +109,13 @@ $().ready(function(){
     .typeString("<span class='grey'> (and cookies)</span><br /><br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
     .pauseFor(2000)
     .typeString("<span class='grey'> /**</span><br />") .callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
-    .typeString("<span class='grey'> * if you want to send me a message</span><br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
-    .typeString("<span class='grey'> * you can send me an email... </span>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<span class='grey tab'> * if you want to send me a message</span><br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<span class='grey tab'> * you can send me an email... </span>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
     .pauseFor(2000)
     .deleteChars(4)
     .typeString("<span class='grey'> or <br /></span>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
-    .typeString("<span class='grey'> * just use following contact form </span><br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
-    .typeString("<span class='grey'> */</span><br />") .callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<span class='grey tab'> * just use following contact form </span><br />").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
+    .typeString("<span class='grey '> */</span><br />") .callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
     .typeString("<strong class='teal'>ContactForm</strong><span class='green'>({</span>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
     .typeString("<div class='form-group row'><div class='col col-sm-3 tab green'  >name:</div><div class='col col-lg'><input  name='message_form[name]' class='form-control  bg-dark input' type='text'  /></div>,</div>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
     .typeString("<div class='form-group row'><div class='col col-sm-3 tab green'>email:</div><div class='col col-lg'><input name='message_form[email]' class='form-control  bg-dark input'  type='text'   /></div>,</div>").callFunction(() => {$("html, body").animate({ scrollTop: $(document).height() },0);})
@@ -125,7 +125,7 @@ $().ready(function(){
   ;
 
   $( "form" ).submit(function( event ) {
-        $('.Typewriter__wrapper').append("<br /> sendmail: ");
+        $('.Typewriter__wrapper').append("<br /> sending mail: ");
     event.preventDefault();
     var posting =  $.post('#', $('form').serialize());
     posting.done(function( data ) {
